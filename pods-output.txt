@@ -1,0 +1,4 @@
+NAME                                READY   STATUS    RESTARTS   AGE
+nginx-deployment-74d5957bf9-46vk7   1/1     Running   0          33m
+nginx-deployment-74d5957bf9-hv8ct   1/1     Running   0          37m
+nginx-deployment-74d5957bf9-p6hdv   1/1     Running   0          33m

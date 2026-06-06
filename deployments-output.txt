@@ -1,0 +1,184 @@
+Name:             nginx-deployment-74d5957bf9-46vk7
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sat, 06 Jun 2026 16:23:17 +0530
+Labels:           app=nginx
+                  pod-template-hash=74d5957bf9
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.6
+IPs:
+  IP:           10.244.0.6
+Controlled By:  ReplicaSet/nginx-deployment-74d5957bf9
+Containers:
+  nginx:
+    Container ID:   docker://23f3e2dde3ac54fd7169ceb8206f10552da2724b68eebb8bd9f8c41bf4dc8268
+    Image:          nginx:latest
+    Image ID:       docker-pullable://nginx@sha256:5aca99593157f4ae539a5dec1092a0ad8762f8e2eb1789085a13a0f5622369f6
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sat, 06 Jun 2026 16:23:30 +0530
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     100m
+      memory:  128Mi
+    Requests:
+      cpu:        100m
+      memory:     128Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-qlnlk (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True
+  Initialized                 True
+  Ready                       True
+  ContainersReady             True
+  PodScheduled                True
+Volumes:
+  kube-api-access-qlnlk:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Guaranteed
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  33m   default-scheduler  Successfully assigned default/nginx-deployment-74d5957bf9-46vk7 to minikube
+  Normal  Pulling    33m   kubelet            Pulling image "nginx:latest"
+  Normal  Pulled     33m   kubelet            Successfully pulled image "nginx:latest" in 4.541s (9.343s including waiting). Image size: 161294340 bytes.
+  Normal  Created    33m   kubelet            Container created
+  Normal  Started    33m   kubelet            Container started
+
+
+Name:             nginx-deployment-74d5957bf9-hv8ct
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sat, 06 Jun 2026 16:19:28 +0530
+Labels:           app=nginx
+                  pod-template-hash=74d5957bf9
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.4
+IPs:
+  IP:           10.244.0.4
+Controlled By:  ReplicaSet/nginx-deployment-74d5957bf9
+Containers:
+  nginx:
+    Container ID:   docker://044fdc8228e88bc0abb188b67dd3a2f86e12d0e03b69d842e95070b6d6318c93
+    Image:          nginx:latest
+    Image ID:       docker-pullable://nginx@sha256:5aca99593157f4ae539a5dec1092a0ad8762f8e2eb1789085a13a0f5622369f6
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sat, 06 Jun 2026 16:20:38 +0530
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     100m
+      memory:  128Mi
+    Requests:
+      cpu:        100m
+      memory:     128Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-b6jpf (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True
+  Initialized                 True
+  Ready                       True
+  ContainersReady             True
+  PodScheduled                True
+Volumes:
+  kube-api-access-b6jpf:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Guaranteed
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  37m   default-scheduler  Successfully assigned default/nginx-deployment-74d5957bf9-hv8ct to minikube
+  Normal  Pulling    37m   kubelet            Pulling image "nginx:latest"
+  Normal  Pulled     36m   kubelet            Successfully pulled image "nginx:latest" in 1m6.054s (1m6.054s including waiting). Image size: 161294340 bytes.
+  Normal  Created    36m   kubelet            Container created
+  Normal  Started    36m   kubelet            Container started
+
+
+Name:             nginx-deployment-74d5957bf9-p6hdv
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sat, 06 Jun 2026 16:23:17 +0530
+Labels:           app=nginx
+                  pod-template-hash=74d5957bf9
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.5
+IPs:
+  IP:           10.244.0.5
+Controlled By:  ReplicaSet/nginx-deployment-74d5957bf9
+Containers:
+  nginx:
+    Container ID:   docker://d12c7f44381951188252f001b1fb24ff1d6a5247de5be470470ef3cd81d4da87
+    Image:          nginx:latest
+    Image ID:       docker-pullable://nginx@sha256:5aca99593157f4ae539a5dec1092a0ad8762f8e2eb1789085a13a0f5622369f6
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sat, 06 Jun 2026 16:23:25 +0530
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     100m
+      memory:  128Mi
+    Requests:
+      cpu:        100m
+      memory:     128Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-295qd (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True
+  Initialized                 True
+  Ready                       True
+  ContainersReady             True
+  PodScheduled                True
+Volumes:
+  kube-api-access-295qd:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Guaranteed
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  33m   default-scheduler  Successfully assigned default/nginx-deployment-74d5957bf9-p6hdv to minikube
+  Normal  Pulling    33m   kubelet            Pulling image "nginx:latest"
+  Normal  Pulled     33m   kubelet            Successfully pulled image "nginx:latest" in 4.882s (4.882s including waiting). Image size: 161294340 bytes.
+  Normal  Created    33m   kubelet            Container created
+  Normal  Started    33m   kubelet            Container started
