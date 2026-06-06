@@ -33,7 +33,7 @@
 
 ## 🏗️ Architecture
 
-\`\`\`
+```
 ┌─────────────────────────────────────────────────────────┐
 │                    WINDOWS 10 LAPTOP                    │
 │                                                         │
@@ -62,7 +62,7 @@
 │                         ▼                               │
 │                   BROWSER ACCESS                        │
 └─────────────────────────────────────────────────────────┘
-\`\`\`
+```
 
 ---
 
@@ -70,8 +70,7 @@
 
 ### 1. `deployment.yaml`
 Defines the application deployment configuration.
-
-\`\`\`yaml
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -97,12 +96,12 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "100m"
-\`\`\`
+```
 
 ### 2. `service.yaml`
 Exposes the application to external traffic.
 
-\`\`\`yaml
+```
 apiVersion: v1
 kind: Service
 metadata:
@@ -118,14 +117,14 @@ spec:
       port: 80
       targetPort: 80
       nodePort: 30000
-\`\`\`
+```
 
 ---
 
 ## 💻 Setup Instructions
 
 ### Prerequisites
-\`\`\`bash
+```
 # Verify Docker is running
 docker --version
 
@@ -134,10 +133,10 @@ minikube version
 
 # Verify kubectl installation
 kubectl version --client
-\`\`\`
+```
 
 ### Start Kubernetes Cluster
-\`\`\`bash
+```
 # Start Minikube with Docker driver
 minikube start --driver=docker
 
@@ -145,23 +144,23 @@ minikube start --driver=docker
 minikube status
 kubectl cluster-info
 kubectl get nodes
-\`\`\`
+```
 
 ---
 
 ## 🚀 Deployment Steps
 
 ### Step 1: Apply Configurations
-\`\`\`bash
+```
 # Deploy the application
 kubectl apply -f deployment.yaml
 
 # Expose the service
 kubectl apply -f service.yaml
-\`\`\`
+```
 
 ### Step 2: Verify Deployment
-\`\`\`bash
+```
 # Check pods status
 kubectl get pods
 
@@ -170,16 +169,16 @@ kubectl get services
 
 # Check deployments
 kubectl get deployments
-\`\`\`
+```
 
 ### Step 3: Access the Application
-\`\`\`bash
+```
 # Get the access URL
 minikube service nginx-service --url
 
 # Open in browser
 minikube service nginx-service
-\`\`\`
+```
 
 **Access URL:** `http://192.168.49.2:30000`
 
@@ -188,35 +187,35 @@ minikube service nginx-service
 ## 📊 Results & Verification
 
 ### Pod Status
-\`\`\`bash
+```
 $ kubectl get pods
 NAME                                READY   STATUS    RESTARTS   AGE
 nginx-deployment-74d5957bf9-46vk7   1/1     Running   0          58s
 nginx-deployment-74d5957bf9-hv8ct   1/1     Running   0          4m47s
 nginx-deployment-74d5957bf9-p6hdv   1/1     Running   0          58s
-\`\`\`
+```
 
 ### Service Status
-\`\`\`bash
+```
 $ kubectl get services
 NAME            TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
 kubernetes      ClusterIP   10.96.0.1      <none>        443/TCP        12m
 nginx-service   NodePort    10.111.79.51   <none>        80:30000/TCP   4m41s
-\`\`\`
+```
 
 ### Deployment Status
-\`\`\`bash
+```
 $ kubectl get deployments
 NAME               READY   UP-TO-DATE   AVAILABLE   AGE
 nginx-deployment   3/3     3            3           4m47s
-\`\`\`
+```
 
 ---
 
 ## 📈 Scaling Demonstration
 
 ### Scale from 1 to 3 Replicas
-\`\`\`bash
+```
 # Scale the deployment
 kubectl scale deployment nginx-deployment --replicas=3
 
@@ -225,7 +224,7 @@ kubectl get pods
 
 # Watch scaling in real-time
 kubectl get pods --watch
-\`\`\`
+```
 
 ### Scaling Results
 | Metric | Before Scaling | After Scaling |
@@ -240,10 +239,10 @@ kubectl get pods --watch
 ## 🔍 Debugging & Logs
 
 ### Pod Details
-\`\`\`bash
+```
 # Get detailed pod information
 kubectl describe pod nginx-deployment-74d5957bf9-hv8ct
-\`\`\`
+```
 
 **Key Information:**
 - **Status:** Running
@@ -254,25 +253,25 @@ kubectl describe pod nginx-deployment-74d5957bf9-hv8ct
 - **Restart Count:** 0
 
 ### Container Logs
-\`\`\`bash
+```
 # View pod logs
 kubectl logs nginx-deployment-74d5957bf9-hv8ct
 
 # Stream logs in real-time
 kubectl logs -f nginx-deployment-74d5957bf9-hv8ct
-\`\`\`
+```
 
 ### Events
-\`\`\`bash
+```
 # View cluster events
 kubectl get events --sort-by='.lastTimestamp'
-\`\`\`
+```
 
 ---
 
 ## 📚 Commands Reference
 
-\`\`\`bash
+```
 # Cluster Management
 minikube start --driver=docker
 minikube stop
@@ -297,15 +296,9 @@ kubectl get events
 # Cleanup
 kubectl delete deployment nginx-deployment
 kubectl delete service nginx-service
-\`\`\`
+```
 
 ---
 
 
 
-
-
-
----
-**⭐ Star this repository if you found it helpful!**
-"@ | Out-File -FilePath "README.md" -Encoding utf8
